@@ -11,19 +11,19 @@ The following pseudo code shows how the DATASETs are processed:
 
 //***************************************************
 
-for loop: DATASET 0 to 3
+      for loop: DATASET 0 to 3
 
-      for loop: i=1 to number_of_events; i++
+            for loop: i=1 to number_of_events; i++
       
-              send data from cpu to GPU
+                  send data from cpu to GPU
               
-              kernel_call<<<1 block, 1024 threads/block>>>();
+                  kernel_call<<<1 block, 1024 threads/block>>>();
               
-              recieve data from GPU to CPU
+                  recieve data from GPU to CPU
               
-      end
+            end
       
-end 
+      end 
 
 
 //***************************************************
@@ -32,17 +32,17 @@ In the kernel call, I am using only 1024 threads. but the number of states is 40
 
 //***************************************************
 
-for loop: i=0 to 3; i++
+      for loop: i=0 to 3; i++
 
-        calculated transition probability
+            calculated transition probability
         
-        calculated emission probability
+            calculated emission probability
         
-        update alpha
+            update alpha
         
-end
+      end
 
-find the maximum emission probability
+      find the maximum emission probability
 
 
 //***************************************************
