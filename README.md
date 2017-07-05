@@ -53,7 +53,7 @@ To export the path(if you have not done yet):
 
 To run the file from terminal:
 
-      $ nvcc bcall_1_block_multi_event.cu -use_fast_math -Xptxas -v -arch=sm_30 -lcurand 
+      $ nvcc bcall_1_block_1_event.cu -use_fast_math -Xptxas -v -arch=sm_30 -lcurand 
 
 I have used -arch=sm_30 because the compute capability of my GPU is 3.0. check yours one. 
 
